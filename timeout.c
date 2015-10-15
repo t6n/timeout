@@ -37,17 +37,6 @@ execute(char **argv, int timeout)
 			kill(pid, SIGINT);
 			exit(EXIT_FAILURE);
 
-			/*
-			switch(waitpid(pid, &status, WNOHANG)) {
-				case -1:
-					fprintf(stderr, "child process failed\n");
-					exit(EXIT_FAILURE);
-				case 0:
-					kill(pid, SIGTERM);
-					fprintf(stderr, "Time Limit of %d Exceeded!\n", timeout);
-					exit(EXIT_FAILURE);
-			}
-			*/
 	}
 }
 
